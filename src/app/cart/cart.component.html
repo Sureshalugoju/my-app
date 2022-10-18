@@ -1,0 +1,33 @@
+<h1>cart</h1>
+<label>Name:</label>
+<input type="text" [(ngModel)]="name">
+<br>
+<label>Price:</label>
+<input type="number" [(ngModel)]="price">
+<br>
+<label>quantity</label>
+<input type="number" [(ngModel)]="quantity">
+<br>
+<button (click)="addtocart()">add to cart</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>s.no</th>
+            <th>name</th>
+            <th>price</th>
+            <th>quantity</th>
+        </tr>
+    </thead>
+    <tbody >
+
+        <tr *ngFor="let cart of carts let i = index">
+            <td>{{i+1}}</td>
+            <td>{{cart.name}}</td>
+            <td>{{cart.price}}</td>
+            <td>{{cart.quantity}}</td>
+
+        </tr>
+
+    </tbody>
+</table>

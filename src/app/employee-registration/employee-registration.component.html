@@ -1,0 +1,59 @@
+
+
+<h1> Employee Registration</h1>
+<br>
+
+<label>Name:</label>
+<input type="text" [(ngModel)]="name">
+<br>
+
+<label>Age:</label>
+<input type="number" [(ngModel)]="age">
+<br>
+<!-- {{age}}  -->
+
+<label>Company:</label>
+<input type="text" [(ngModel)]="company">
+<br>
+
+<label>Package:</label>
+<input type="number" [(ngModel)]="package">
+<br>
+<br>
+<button class="me" (click)="register()"> Register </button>
+
+<br><br>
+<!-- {{employees | json}} -->
+
+<table class="table-dark" border="1">
+    <thead>
+           <tr>
+               <th>s.no</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Company</th>
+                <th>package</th>
+           </tr>
+    </thead>
+    <tbody>
+           <tr *ngFor = "let employee of employees; let i = index">
+               <td>{{ i+1 }}</td>
+                <td> {{employee.name}} </td>
+
+                <!-- <td> {{employee.age }} </td> -->
+                <td [ngStyle]="{ 'color':employee.age >= 16 ? 'green' : 'red'}">{{ employee.age }}</td>
+                <td> {{employee.company}} </td>
+
+                <!-- <td> {{employee.package }} </td> -->
+                <td [ngStyle]="{ 'color':employee.package >= 10 ? 'green' : 'red'}"
+                    [ngClass]="{'yellow': employee.package>=10, 'grey': employee.package<10 }"
+                    
+                    >{{ employee.package }} 
+                </td>
+
+               <td>
+                    <button class="btn btn-danger" (click)="delete(i)">delete</button>
+               </td>
+               </tr>
+    </tbody>
+</table>

@@ -1,0 +1,36 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: blue;
+    margin-top: 20px;
+   
+}
+.left
+{
+    height: 100%;
+    width: 20%;
+    background-color:aqua;
+    font-size: 20px;
+    font-size: 20px;
+    text-align: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf0s12hiWmkk2MNC5QASzu3MnXAmw8GHBemg&usqp=CAU);
+    background-size: cover;
+}
+.left > h6{
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+.left > h6:hover{
+    background-color:orange;
+}
+.right
+{
+    height: 100%;
+    width: 80%;
+    background-image: url(https://images.ctfassets.net/hrltx12pl8hq/3KWcqxPlvmgkpMS5VdjLAk/3cbdd812faf4b8c343b259656d31a0ee/rendered_15.jpg?fit=fill&w=480&h=270);
+    background-size: cover; 
+    padding-left: 20px; 
+    overflow: auto;
+}
